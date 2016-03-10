@@ -30,7 +30,21 @@ public class Test {
 		double cal2 = acc2.calculateInterest(100.0);
 		System.out.println("Savings --> " + cal1);
 		System.out.println("TermDeposit --> " + cal2);
-
+		
+		acc1 = new SavingsAccountImplementation();
+		acc1.initializeEfficientMode();
+		acc1.deposit(50.0);
+		acc2 = new TermDepositAccountImplementation();
+		acc2.initializeEfficientMode();
+		acc2.deposit(25.0);
+		acc1.withdraw(25);
+		acc2.withdraw(10);
+		cal1 = acc1.calculateInterest(100.0);
+		cal2 = acc2.calculateInterest(100.0);
+		System.out.println("Savings --> " + cal1);
+		System.out.println("TermDeposit --> " + cal2);
+		
+		
 	}
 	
 

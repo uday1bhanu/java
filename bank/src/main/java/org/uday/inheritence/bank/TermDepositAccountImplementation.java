@@ -28,5 +28,9 @@ public class TermDepositAccountImplementation implements Account{
 	public void withdraw (double amount) {
 		helper.withdraw (amount); // code reuse via composition
 	}
+	
+	public void initializeEfficientMode(){
+		helper = new EfficientAccountHelperImplementation();
+	}
 
 }
