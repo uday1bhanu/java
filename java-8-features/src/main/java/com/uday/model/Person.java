@@ -1,20 +1,27 @@
 package com.uday.model;
 
+import java.time.LocalDate;
+
 public class Person {
 	private String name;
 	private int age;
 	private String city;
 	private String state;
-
-	public Person(String name, int age, String city, String state) {
+	private LocalDate birthDate;
+	public Person(String name, int age, String city, String state, LocalDate birthDate) {
 		super();
 		this.name = name;
 		this.age = age;
 		this.city = city;
 		this.state = state;
+		this.birthDate = birthDate;
 	}
 	public int getAge() {
 		return age;
+	}
+
+	public LocalDate getBirthDate() {
+		return birthDate;
 	}
 	public String getCity() {
 		return city;
@@ -28,6 +35,9 @@ public class Person {
 	public void setAge(int age) {
 		this.age = age;
 	}
+	public void setBirthDate(LocalDate birthDate) {
+		this.birthDate = birthDate;
+	}
 	public void setCity(String city) {
 		this.city = city;
 	}
@@ -39,6 +49,7 @@ public class Person {
 	}
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", age=" + age + "]";
+		return "Person [name=" + name + ", age=" + age + ", city=" + city + ", state=" + state + ", birthDate="
+				+ birthDate + "]";
 	}
 }

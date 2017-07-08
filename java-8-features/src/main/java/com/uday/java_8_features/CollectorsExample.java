@@ -33,7 +33,7 @@ public class CollectorsExample {
 		{
 			stream.map(l -> {
 				String[] s = l.split(" ");
-				Person p = new Person(s[0].trim(), Integer.parseInt(s[1]), s[2].trim(), s[3].trim());
+				Person p = new Person(s[0].trim(), Integer.parseInt(s[1]), s[2].trim(), s[3].trim(), null);
 				persons.add(p);
 				return p;
 			}).forEach(System.out::println);
