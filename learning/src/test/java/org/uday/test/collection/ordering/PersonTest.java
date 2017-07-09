@@ -2,8 +2,8 @@ package org.uday.test.collection.ordering;
 
 import java.util.Arrays;
 
-import org.uday.collection.ordering.Person;
 import org.uday.collection.ordering.PersonLastNameComparator;
+import org.uday.model.Person;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

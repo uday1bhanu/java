@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.uday.collection.ordering;
+package org.uday.model;
 
 /**
  * @author bexadmin
