@@ -12,9 +12,25 @@ import java.util.Comparator;
 import java.util.List;
 
 public class Person implements Comparable {
+	@Override
+	public String toString() {
+		return "Person [firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", gender=" + gender
+				+ ", birthday=" + birthday + ", emailAddress=" + emailAddress + "]";
+	}
+
 	private String firstName;
 	private String lastName;
 	private int age;
+
+	public Person(String firstName, String lastName, int age, Sex gender, int birthday, String emailAddress) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.gender = gender;
+		this.birthday = birthday;
+		this.emailAddress = emailAddress;
+	}
 
 	public enum Sex {
 		MALE, FEMALE
@@ -28,7 +44,7 @@ public class Person implements Comparable {
 		
 	}
 	
-	Person(String firstNameArg, String lastNameArg, int birthdayArg,
+	public Person(String firstNameArg, String lastNameArg, int birthdayArg,
 			Sex genderArg, String emailArg) {
 		firstName = firstNameArg;
 		lastName = lastNameArg;
