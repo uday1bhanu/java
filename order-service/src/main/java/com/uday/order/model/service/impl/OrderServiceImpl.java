@@ -5,6 +5,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.uday.common.DataAccessException;
 import com.uday.common.ServiceException;
 import com.uday.order.dao.OrderDao;
@@ -21,6 +24,8 @@ import com.uday.order.model.transformation.OrderEntityToOrderSummaryTransformati
 
 public class OrderServiceImpl implements OrderService {
 	private final static int MAX_INSERT_ATTEMPT = 3;
+	private final static Logger AUDIT_LOGGER = LoggerFactory.getLogger("AUDIT");
+	
 	private OrderDao orderDao = null;
 	private OrderEntityToOrderSummaryTransformation orderEntityToOrderSummaryTransformation = null;
 	public OrderServiceImpl() {
@@ -135,6 +140,7 @@ public class OrderServiceImpl implements OrderService {
 			orderCompletionAudit.setCompletionDate(completionDate);
 			orderCompletionAudit.setOrderNumber(orderEntity.getOrderNumber());
 			
+			AUDIT_LOGGER.info(String.format("Order completed - %1$s", orderCompletionAudit));
 		}
 		catch(DataAccessException ex){
 			throw new ServiceException("Data access error while completing the order", ex);

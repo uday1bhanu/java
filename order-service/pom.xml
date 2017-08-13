@@ -24,15 +24,39 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.11</version>
       <scope>test</scope>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
-	<dependency>
+	<!--<dependency>
 	    <groupId>org.mockito</groupId>
 	    <artifactId>mockito-all</artifactId>
 	    <version>1.9.5</version>
 	    <scope>test</scope>
+	</dependency>-->
+	<!-- https://mvnrepository.com/artifact/org.powermock/powermock-api-mockito -->
+	<dependency>
+	    <groupId>org.powermock</groupId>
+	    <artifactId>powermock-api-mockito</artifactId>
+	    <version>1.7.1</version>
+	    <scope>test</scope>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.powermock/powermock-module-junit4-common -->
+	<dependency>
+	    <groupId>org.powermock</groupId>
+	    <artifactId>powermock-module-junit4</artifactId>
+	    <version>1.7.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-api</artifactId>
+	    <version>1.7.5</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-jdk14</artifactId>
+	    <version>1.7.5</version>
+	    <scope>runtime</scope>
 	</dependency>
   </dependencies>
 </project>
